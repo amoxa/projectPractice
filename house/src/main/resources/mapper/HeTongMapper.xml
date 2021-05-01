@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fc.mapper.HeTongMapper">
+    <!--根据房屋id查询合同信息-->
+    <select id="findHeTong" resultType="com.fc.entity.Hetong">
+        select *
+        from hetong
+        where house_id = #{house_id}
+    </select>
+    <!--更新合同信息-->
+    <update id="updateHeTong" parameterType="com.fc.entity.Hetong">
+        update hetong
+        set address=#{address},
+            payday=#{payday},
+            price=#{price},
+            chuzu=#{chuzu},
+            chuzu_idcard=#{chuzu_idcard},
+            zuke=#{zuke},
+            zuke_idcard=#{zuke_idcard},
+            fromdate=#{fromdate},
+            todate=#{todate}
+        where house_id = #{house_id}
+    </update>
+    <!--删除一条合同信息:相当于终止合同-->
+    <delete id="deleteHeTong" parameterType="String">
+        delete
+        from hetong
+        where house_id = #{house_id}
+    </delete>
+    <!--增加一条合同信息-->
+    <insert id="addHeTong" parameterType="com.fc.entity.Hetong">
+        insert into hetong(house_id, address, payday, price, chuzu, chuzu_idcard, zuke, zuke_idcard, fromdate, todate)
+        values (#{house_id}, #{address}, #{payday}, #{price}, #{chuzu}, #{chuzu_idcard}, #{zuke}, #{zuke_idcard},
+                #{fromdate}, #{todate})
+    </insert>
+
+    <select id="findHeTongByHouseId" resultType="com.fc.entity.Hetong">
+        select *
+        from hetong
+        where house_id = #{house_id}
+    </select>
+
+</mapper>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fc.mapper.HouseMapper">
+    <!--查询所有-->
+    <select id="queryAllHouse" resultType="com.fc.entity.HouseList">
+        select *
+        from houselist
+    </select>
+    <!--根据id查询-->
+    <select id="findById" resultType="com.fc.entity.HouseList" parameterType="int">
+        select *
+        from houselist
+        where id = #{id}
+    </select>
+    <!--根据house查询house-->
+    <select id="findByHouse" parameterType="com.fc.entity.HouseList" resultType="com.fc.entity.HouseList">
+        select *
+        from houselist
+        where houseid = #{houseid}
+          and id != #{id}
+    </select>
+    <!--更新房屋信息-->
+    <update id="updateHouse" parameterType="com.fc.entity.HouseList">
+        update houselist
+        set houseid=#{houseid},
+            address=#{address},
+            area=#{area},
+            price=#{price},
+            status=#{status}
+        where id = #{id}
+    </update>
+    <!--根据主键删除房屋信息-->
+    <delete id="deleteHouse" parameterType="int">
+        delete
+        from houselist
+        where id = #{id}
+    </delete>
+    <!--根据房屋编号删除一条房信息-->
+    <delete id="deleteHouseByHouseId" parameterType="String">
+        delete
+        from houselist
+        where houseid = #{houseid}
+    </delete>
+    <!--添加一条房屋信息-->
+    <update id="addHouse" parameterType="com.fc.entity.HouseList">
+        insert into houselist(houseid, address, area, price, status)
+        values (#{houseid}, #{address}, #{area}, #{price}, #{status})
+    </update>
+
+
+    <select id="findByHouseId" resultType="com.fc.entity.HouseList">
+        select *
+        from houselist
+        where houseid = #{house_id}
+    </select>
+
+    <update id="updateHouseStatus" parameterType="com.fc.entity.HouseList">
+        update houselist
+        set status=#{status}
+        where id = #{id}
+    </update>
+
+</mapper>
