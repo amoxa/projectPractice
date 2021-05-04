@@ -9,7 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e47506d8-f372-4d13-8243-adf92f1f106f" name="默认变更列表" comment="" />
+    <list default="true" id="e47506d8-f372-4d13-8243-adf92f1f106f" name="默认变更列表" comment="">
+      <change afterPath="$PROJECT_DIR$/house/house.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/house/src/main/java/com/fc/controller/HouseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/house/src/main/java/com/fc/controller/HouseController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,6 +62,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../projectDemo" />
@@ -173,8 +178,16 @@
       <workItem from="1619566028869" duration="7422000" />
       <workItem from="1619673960780" duration="8015000" />
       <workItem from="1619761594179" duration="36000" />
-      <workItem from="1619872481553" duration="106000" />
+      <workItem from="1619872481553" duration="2042000" />
     </task>
+    <task id="LOCAL-00001" summary="测试提交">
+      <created>1619872734195</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1619872734195</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +203,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="测试提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试提交" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -21,8 +21,9 @@ public class HouseController {
         List<HouseList> houseLists = houseService.queryAllHouse();
 
         model.addAttribute("houselists", houseLists);
+        model.addAttribute("mainPage", "ahouselist.jsp");
 
-        return "admin/ahouselist.jsp";
+        return "admin/main1.jsp";
     }
 
 
@@ -31,8 +32,9 @@ public class HouseController {
         houseService.findById(houseList);
 
         model.addAttribute("houselist", houseList);
+        model.addAttribute("mainPage", "changehouse.jsp");
 
-        return "admin/changehouse.jsp";
+        return "admin/main1.jsp";
     }
 
     @RequestMapping("houseUpdate")
