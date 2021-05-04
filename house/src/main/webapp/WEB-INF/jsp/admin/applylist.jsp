@@ -74,11 +74,8 @@
 											<a class="link-del"
 											 href="/apply/reFuseApply?house_id=${apply.house_id}"
 											onclick="return window.confirm('确定要拒绝该租客的申请吗？')">拒绝租赁</a></td>
-										
-											
-									</td>		
-										
-										
+									</td>
+
 									</tr>
 
 								</c:forEach>
