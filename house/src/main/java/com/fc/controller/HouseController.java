@@ -53,8 +53,9 @@ public class HouseController {
     }
 
     @RequestMapping("toaddhouse")
-    public String toAddHouse(){
-        return "admin/addhouse.jsp";
+    public String toAddHouse(Model model){
+        model.addAttribute("mainPage", "addhouse.jsp");
+        return "admin/main1.jsp";
     }
 
     @RequestMapping("addhouse")
@@ -63,7 +64,8 @@ public class HouseController {
         if (houseService.addHouse(houseList) == 1){
             error = "succeed!";
         }
+        model.addAttribute("mainPage", "addhouse.jsp");
         model.addAttribute("error", error);
-        return "admin/addhouse.jsp";
+        return "admin/main1.jsp";
     }
 }
